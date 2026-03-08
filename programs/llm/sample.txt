@@ -1,0 +1,23 @@
+Artificial Intelligence (AI) is transforming various industries by automating tasks, improving efficiency, and enabling new capabilities. From healthcare to finance, AI is playing a crucial role in decision-making and data analysis.
+
+One major application of AI is Natural Language Processing (NLP), which allows machines to understand, interpret, and generate human language. Companies like Google, OpenAI, and Microsoft are leveraging NLP for chatbots, virtual assistants, and search engines.
+
+Another key area is computer vision, where AI helps recognize objects, faces, and even emotions from images and videos. This technology is widely used in security, healthcare diagnostics, and autonomous vehicles.
+
+Despite these advancements, AI also raises ethical concerns, including privacy, bias, and job displacement. As AI continues to evolve, balancing innovation with responsibility will be crucial for its long-term success.
+
+program 7 in visual studio code by creating virtual environment
+Steps
+1. create genailab folder
+2. cd genailab
+3. create virtual environment
+python -m venv myenv
+4. activate virtual environment
+.\myenv\Scripts\activate
+5. install the required libraries
+pip - transformers jupyter
+6. Open jupyter note book from your
+virtual environment
+jupyter
+7. Create or upload program and execute
+
