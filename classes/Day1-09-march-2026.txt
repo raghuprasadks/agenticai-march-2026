@@ -1,0 +1,177 @@
+Agenda:
+1. Introduction to AI,ML,Deep Learning
+
+Natural Intelligence
+
+Machine Learning
+predicting,prescribing
+predicting price of gold,stock
+classifying - x-ray - fracture or not
+grouping - clustering
+reply to email - generative ai
+
+
+
+labelled data
+Supervised
+Un-supervised
+Semi-supervised
+Reinforcement
+
+why ai now
+availability of digitized data
+availability of computing power
+open source software/community libraries
+
+deep learning
+neural network
+biological neuron
+
+Generative AI - 
+
+what is the population of the world
+
+text,image,video,audio
+peom
+
+Language Model
+
+Large Language Model (LLM)
+
+chatgpt is an application
+openai - developed chatgpt
+ceo openai - sam altman
+GPT - 5.1,
+GPT - 2....
+GPT - 3
+
+AI agents
+who won t20 cricket world cup help in 2026
+Web agent
+when was your last training
+up to August 2025.
+Agentic AI
+
+1. Prompt engineering
+zero prompt
+
+1.what is llm
+2.as a trainer i want to conduct 3 days of training on Generative AI for engineering students. can you give me topics
+3.create presentation
+4.can you include diagrams and sample programs using python with open source llm
+5.create mcq questions on generative ai
+with answers
+6.download as a word document
+7. Commercial llm's in terms of popularity
+8. Open source llm's in terms of popularity
+
+What is the version of python installed in your system
+
+open command prompt/terminal
+
+python --version
+
+check the location of python in your system
+where python
+
+windows search
+idle
+File 
+Save as
+C:\Users\lenovo\AppData\Local\Programs\Python\Python312
+C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Scripts
+
+edit in search
+
+edit the system environment variable
+path
+edit
+
+cohere
+https://cohere.com/
+Sign up and login
+
+https://dashboard.cohere.com/welcome/register
+
+after login
+click on play ground
+
+system message
+you are a helpful bot
+
+user
+who are you 
+
+click on send
+
+
+import cohere
+
+co = cohere.ClientV2(api_key="<YOUR_API_KEY>")
+
+response = co.chat(
+    messages=[
+        {
+            "role": "system",
+            "content": "you are a helpful bot"
+        },
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "who are you"
+                }
+            ]
+        },
+        {
+            "role": "assistant",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "I'm Command, an AI assistant, ready to provide thorough and informative responses. I've been developed by Cohere to offer helpful support. How can I be of assistance today?"
+                }
+            ]
+        }
+    ],
+    temperature=0.3,
+    model="command-a-03-2025",
+)
+
+print(response)
+
+yGlhFfYaems7Qn25x5DYVa2eS4NiLz6Bzuh5aXyc
+
+create virtual environment
+open terminal
+python -m venv myenv
+
+activate virtual environment
+
+pip install cohere
+
+create agenticai folder
+create handson inside agenticai folder
+open terminal/command program
+type code .
+
+www.kaushalya.tech
+git
+repositories
+agenticai-march-2026
+https://github.com/raghuprasadks/agenticai-march-2026
+git clone https://github.com/raghuprasadks/agenticai-march-2026.git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
