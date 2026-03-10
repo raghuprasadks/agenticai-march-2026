@@ -1,9 +1,4 @@
-
-#pip install torch torchvision torchaudio
-#pip install transformers
-#pip install tf-keras
-#Libraries to be installed
-#pip install transformers torch
+#pip install  torch transformers
 from transformers import pipeline
 
 # Load pre-trained sentiment analysis pipeline

@@ -1,6 +1,6 @@
 import os
 from huggingface_hub import InferenceClient
-# pip install huggingface-hub
+# pip install huggingface-hub python-dotenv
 # Ensure you have set your HF_TOKEN in the environment variables
 
 from dotenv import load_dotenv

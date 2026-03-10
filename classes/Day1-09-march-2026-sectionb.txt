@@ -1,0 +1,114 @@
+Agenda:
+
+section b
+
+Agentic AI
+AI
+ML
+Supervised ML
+Regression - predict 
+Linear Regression
+y=mx+C
+Classification
+Yes/No
+Un-Supervised
+Re-inforcement ML
+
+1950 - AI
+AI - 5 years
+1. Availability of digital data
+2. Computing power
+3. Algorithms/open source
+
+Top AI companies
+1. Open AI- Sam Altman
+2. Nvidea
+Generative AI - generate text,video
+audio,
+LLM - Large Language Models
+commercial large language models
+open source large language models
+
+company - openai
+model - gpt
+application -chatgpt
+
+Attention is all you need
+cohere - command
+streamlit - Python with User Interface
+pip install streamlit
+python <programname>
+streamlit run 3-cohere-streamlit.py
+
+
+llm's
+
+prompt : who are you
+1. tokenization
+who
+are
+you
+2. token id
+who - 1
+are  - 100
+you - 200
+3. embedding - size
+who - [1.3,.8,.9]
+are - [2.8,0.8,9]
+you - []
+
+man
+king
+boy
+
+women
+girl
+lady
+
+4. positional embedding
+apple price is going up.Doctor
+says an apple a day is good 
+for health
+
+layers
+attention layer
+
+neural network
+
+
+
+
+
+
+
+
+
+
+
+
+
+AI Agents
+Agentic AI
+
+
+
+
+Deep Learning
+Generative AI
+AI Agents
+Agentic AI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

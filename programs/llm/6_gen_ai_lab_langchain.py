@@ -3,7 +3,7 @@
 
 import os
 from langchain_core.prompts import PromptTemplate
-from langchain_community.llms import Cohere
+from langchain_cohere import ChatCohere
 from dotenv import load_dotenv
 
 
@@ -35,7 +35,7 @@ except Exception as e:
     exit(1)
 
 # Load Cohere model
-llm = Cohere(model="command", cohere_api_key=os.environ["COHERE_API_KEY"])
+llm = ChatCohere(model="command-r-plus-08-2024", cohere_api_key=os.environ["COHERE_API_KEY"])
 
 # Define prompt template
 prompt = PromptTemplate(
@@ -45,6 +45,7 @@ prompt = PromptTemplate(
 
 # Format and generate response
 formatted_prompt = prompt.format(input_text=document_text)
-response = llm.invoke(formatted_prompt)
+from langchain_core.messages import HumanMessage
+response = llm.invoke([HumanMessage(content=formatted_prompt)])
 
-print("\n📝 Summary:\n", response)
+print("\n📝 Summary:\n", response.content)
