@@ -1,0 +1,126 @@
+Agenda:
+Recap:
+1. Introduction about AI,ML....
+2. LLM,prompt
+3. virtual environment
+python -m venv myenv
+python --version
+set the path
+3. Interfacing with  llm
+install the library
+pip install cohere
+api - application programming interface
+api key
+sample programming
+command line chatbot
+streamlit
+gradio
+
+2. Transformer architecture
+
+Neural Network - biological neurons
+ANN - Artificial Neural Network
+generic - regression,classfication
+CNN - Convolution Neural Network
+images
+RNN - Recurrent Neural Network
+time series data
+NLP - Natural Language Processing
+
+Attention is all you need
+
+Help me in learning generative AI
+Step 1 - tokenization - convert to word
+help - 100
+me - 2
+in - 5
+learning - 10
+generative
+ai
+step 2 - assign token id
+step 3 - embedding
+converting token into vector
+help - [3.5,4.5,0.6]
+man - [4.9,8.9,4.6]
+king - [5,10,4.2]
+
+I want to buy an apple product.
+Doctor says eating apple makes you healthy.
+women
+positional embedding
+
+Step 4 - Attention layer
+step 5 - neural network
+step 6 - predict the probability of the next word
+
+hands-on
+1. create llmpractive folder
+2. copy 1_genai_lab_word2vec.py
+3. open in vs code
+4. open terminal
+5. activate virtual environment
+6. Go through the code
+
+Assignment 1
+
+T20 men's cricket world cup
+
+
+
+They were the overwhelming favourites coming into the tournament — a stunning run since winning the 2024 edition, playing in familiar home conditions and with almost all the players in form. But the ICC Men's T20 World Cup 2026 did not pan out as expected for the defending champions and co-hosts India.
+
+convert this into a vector
+
+maths - playing + winning
+winning - defending
+find the top  3 similar words for tournament
+
+Assignment 2
+create cricket.txt file
+copy following content into it
+They were the overwhelming favourites coming into the tournament — a stunning run since winning the 2024 edition, playing in familiar home conditions and with almost all the players in form. But the ICC Men's T20 World Cup 2026 did not pan out as expected for the defending champions and co-hosts India.
+
+maths - playing + winning
+winning - defending
+find the top  3 similar words for tournament
+
+
+program 2
+
+matplotlib scikit-learn pandas numpy
+
+pandas - read csv,excel
+dataframe - data inside excel sheet
+rows and columns
+2 dimension
+Series - 1 dimension data
+
+marks = [3,54,34,25]
+dataframe dictionary - key : value 
+matplotlib - graphs
+scatter plot
+line plot
+bar chart
+scikit-learn - machine learning libraries
+Principal Component Analysis (PCA)
+
+
+embedding size of popular commercials llms
+
+sarvamai
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

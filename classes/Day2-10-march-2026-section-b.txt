@@ -1,0 +1,80 @@
+Agenda:
+Recap:
+
+program 2
+
+matplotlib scikit-learn pandas numpy
+
+pandas - read csv,excel
+dataframe - data inside excel sheet
+rows and columns
+2 dimension
+Series - 1 dimension data
+
+marks = [3,54,34,25]
+dataframe dictionary - key : value 
+matplotlib - graphs
+scatter plot
+line plot
+bar chart
+scikit-learn - machine learning libraries
+Principal Component Analysis (PCA)
+
+
+embedding size of popular commercials llms
+
+sarvamai
+
+
+Huggingface
+https://huggingface.co/
+models
+tasks
+libraries
+datasets
+spaces
+language translation
+NLLB
+https://huggingface.co/spaces/WeShopAI/WeShopAI-Virtual-Try-On
+https://huggingface.co/spaces/mrfakename/Z-Image-Turbo
+
+transformer library
+
+sentiment analysis
+
+create amazonreview.txt
+
+copy the 5 review for any items in amazon
+paste it into txt file
+
+read the content of the  file line by line 
+and display the sentiment
+
+program 5 - summarization
+
+task = summarization
+
+sign up and login to huggingface
+huggingface token
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
