@@ -23,5 +23,11 @@ chromadb
 https://www.trychroma.com/
 https://docs.trychroma.com/docs/overview/getting-started
 
+chromdb client
+
+In-Memory Client
+persistent client
+
+
 
 
