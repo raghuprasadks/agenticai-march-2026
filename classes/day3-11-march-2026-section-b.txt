@@ -1,0 +1,27 @@
+Agenda:
+1. Recap
+langchain
+langsmith
+langgraph
+deepagent
+
+text to image
+
+embedding
+cohere-embedding
+2. Retrieval Augmented Generation (RAG)
+
+Vector database - chroma db
+embedding-model - cohere embedding
+llm - cohere llm
+pdf - knowledge base
+https://aitckm.edu.in/about-us/
+convert this text into pdf
+
+vector database
+chromadb
+https://www.trychroma.com/
+https://docs.trychroma.com/docs/overview/getting-started
+
+
+
