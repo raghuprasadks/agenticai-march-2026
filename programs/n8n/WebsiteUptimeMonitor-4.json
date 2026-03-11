@@ -1,0 +1,141 @@
+{
+  "name": "WebsiteUptimeMonitor-4",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            },
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "9119f876-9eda-4b2c-b651-0e7c6575c07b",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "url": "https://kaushalya.tech/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        208,
+        0
+      ],
+      "id": "e0a6a10f-a272-4e09-898d-0246301a3af8",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0b7b6016-25e3-45c3-a2f9-b50a02d26efc",
+              "leftValue": "status",
+              "rightValue": "200",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        416,
+        0
+      ],
+      "id": "d79afe10-d747-43f2-872d-d959bcb47abb",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "sendTo": "prasadraghuks@gmail.com",
+        "subject": "www.kaushalya.tech is down",
+        "message": "www.kaushalya.tech is down",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        624,
+        -96
+      ],
+      "id": "983f3a2d-9309-4853-917c-b8f9507dd91a",
+      "name": "Send a message",
+      "webhookId": "d56818e7-a48a-47bf-9967-bef054f7d229",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "OuXDV2Ukj6DEUhef",
+          "name": "Gmail account 3"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "0456f58b-5251-4d25-ab2d-40ff860449cb",
+  "meta": {
+    "instanceId": "caee76afb472a2b9e6c82bc9f4bf2c516f7fd728cdb4ad78a412b649d514bfd1"
+  },
+  "id": "yb0RKfQ7n2S634IX",
+  "tags": []
+}

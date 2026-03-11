@@ -4,9 +4,7 @@ langchain
 langsmith
 langgraph
 deepagent
-
 text to image
-
 embedding
 cohere-embedding
 2. Retrieval Augmented Generation (RAG)
@@ -27,6 +25,12 @@ chromdb client
 
 In-Memory Client
 persistent client
+
+chromadbgetting started
+chromadb-pdf
+
+
+
 
 
 
