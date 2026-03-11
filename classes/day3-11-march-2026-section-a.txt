@@ -1,0 +1,87 @@
+Agenda:
+1. Recap
+transformer architecture
+Attention is all you need
+2.Project ideas
+3. Deploy chatbot into huggingface
+Streamlit,cohere
+
+Steps:
+1. Check whether chatbot is working locally
+activate virtual environment
+2. streamlit run 3-cohere-streamlit.py
+3. Login to huggingface
+4. click spaces
+5. click new space
+name : genai-ait-sectiona-chatbot
+select docker
+streamlit
+cpubasic
+public
+create space
+6. Click Files
+click on requirements.txt
+edit
+
+cohere
+streamlit
+
+click on commit changes to main
+
+back..
+click on src
+click on streamlit_app.py
+edit
+delete the content
+paste your program
+commit
+
+https://huggingface.co/spaces/raghuprasadks/genai-ait-sectiona-chatbot
+
+Assignment
+https://huggingface.co/bharatgenai/sooktam2
+f5_tts
+
+llms
+
+program 6
+langchain
+
+https://www.langchain.com/
+Deep agents
+Lang Chain
+Lang Graph
+RAG
+Retrieval Augmented Generation
+Vector database - chromadb
+sql,nosql
+embedding
+kaushalya.tech
+ekaushalya
+
+ekaushalya.kaushalya.tech
+
+MERN
+Open AI - Python
+
+Project:
+1. Building RAG based chatbot
+department
+college
+2. AI agent interview
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 
 load_dotenv(dotenv_path="../.env")  # Adjust path if needed
-
+#load_dotenv()
 api_key = os.getenv("cohere_api_key")
 
 

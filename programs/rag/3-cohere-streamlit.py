@@ -1,58 +1,52 @@
-import streamlit as st
+import chromadb
 import cohere
-"""
-from dotenv import load_dotenv
+import streamlit as st
 import os
-load_dotenv(dotenv_path="../.env")  # Adjust path if needed
-load_dotenv()
-api_key = os.getenv("cohere_api_key")
-"""
+
+# Cohere API key (hardcoded for demo; use secrets in production)
 api_key = "yGlhFfYaems7Qn25x5DYVa2eS4NiLz6Bzuh5aXyc"
-if not api_key:
-    st.error("API Key not found. Check your .env file and path.")
-    st.stop()
 
-co = cohere.ClientV2(api_key=api_key)
+# Initialize clients
+cohere_client = cohere.Client(api_key)
+client = chromadb.PersistentClient()
+collection = client.get_or_create_collection(name="rag_collection_pdfs")
 
-st.title("AIT Chikkamagalore GENAI SDP Chatbot using Cohere")
-
-if "chat_history" not in st.session_state:
-    st.session_state.chat_history = []
-
-user_input = st.text_input("You:", key="user_input")
-
-if st.button("Send") and user_input:
-    st.session_state.chat_history.append({
-        "role": "user",
-        "content": [
-            {
-                "type": "text",
-                "text": user_input
-            }
-        ]
-    })
-
-    response = co.chat(
-        messages=st.session_state.chat_history,
-        temperature=0.3,
-        model="command-a-03-2025",
+def get_relevant_docs(collection, cohere_client, query, top_k=3):
+    # Embed the query
+    query_emb = cohere_client.embed(texts=[query]).embeddings[0]
+    # Query ChromaDB for similar documents
+    results = collection.query(
+        query_embeddings=[query_emb],
+        n_results=top_k
     )
-    assistant_reply = response.message.content[0].text
-    st.session_state.chat_history.append({
-        "role": "assistant",
-        "content": [
-            {
-                "type": "text",
-                "text": assistant_reply
-            }
-        ]
-    })
+    docs = results['documents'][0] if results['documents'] else []
+    return docs
 
-# Display chat history
+def generate_answer(cohere_client, query, docs):
+    context = "\n".join(docs)
+    message = f"Context:\n{context}\n\nQuestion: {query}\nAnswer:"
+    response = cohere_client.chat(
+        message=message,
+        max_tokens=256,
+        temperature=0.5
+    )
+    return response.text.strip()
 
-for msg in st.session_state.chat_history:
-    #print("msg##",msg['message']['content'][0]['text'])
-    role = msg["role"].capitalize()
-    text = msg["content"][0]["text"]
-    #llm_output['message']['content'][0]['text']
-    st.markdown(f"**{role}:** {text}")
+# Streamlit app
+st.title("RAG Chatbot with Cohere and ChromaDB")
+
+query = st.text_input("Enter your question:")
+
+if st.button("Ask"):
+    if query:
+        docs = get_relevant_docs(collection, cohere_client, query)
+        answer = generate_answer(cohere_client, query, docs)
+        
+        st.subheader("Relevant Documents:")
+        for i, doc in enumerate(docs, 1):
+            st.write(f"{i}. {doc}")
+        
+        st.subheader("Answer:")
+        st.write(answer)
+    else:
+        st.warning("Please enter a question.")

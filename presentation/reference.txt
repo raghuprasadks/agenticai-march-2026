@@ -1,2 +1,13 @@
 https://poloclub.github.io/transformer-explainer/
 https://playground.tensorflow.org/
+
+Project ideas
+Build your own model
+Small Language Model
+
+https://youtu.be/pOFcwcwtv3k?si=sblrJftRaKdLxfZ2
+ZOHO
+Physicswallah
+https://huggingface.co/PhysicsWallahAI/Aryabhata-1.0
+
+
