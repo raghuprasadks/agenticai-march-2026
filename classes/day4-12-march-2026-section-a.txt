@@ -11,3 +11,86 @@ python <>
 2. Run program 3 under rag
 streamlit run <>
 use your api code
+
+Assignment:
+
+1. Creating custom chatbot
+2. Upload to spaces of huggingface
+
+AI agents and Workflow automation using
+n8n
+
+Getting started with n8n
+
+After login to n8n click + 
+workflow - personal
+Add first step
+
+3. API - Application Programming Interface
+Web Service
+free webservice
+jsonplaceholder
+REST - URL
+https://jsonplaceholder.typicode.com/todos
+
+JSON - Java Script Object Notation
+
+Java Script object
+
+student={
+slno:1,
+usn:"4ai23cs011",
+name:"Amit Sharma"
+}
+
+students=[
+{
+slno:1,
+usn:"4ai23cs011",
+name:"Amit Sharma"
+},
+{
+slno:2,
+usn:"4ai23cs012",
+name:"Abdul"
+}
+]
+
+
+json
+student={
+"slno":1,
+"usn":"4ai23cs011",
+"name":"Amit Sharma"
+}
+
+students=
+[
+{
+"slno":1,
+"usn":"4ai23cs011",
+"name":"Amit Sharma"
+},
+{
+"slno":2,
+"usn":"4ai23cs011",
+"name":"Amit Sharma"
+}
+
+]
+
+http - post,get,put,delete
+https://jsonplaceholder.typicode.com/todos/2
+
+2. Workflow
+Schedule Trigger
+Trigger
+minutes - 5
+
+
+
+
+
+
+
+
