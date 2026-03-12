@@ -1,0 +1,6 @@
+1. Create a page to upload pdf file
+required for RAG
+Save upload file to chromadb
+2. Create a search feature to
+search the content uploaded using
+upload facility
