@@ -1,0 +1,5 @@
+Agenda:
+1. RAG
+Purpose
+how it works
+programs

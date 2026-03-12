@@ -1,20 +1,15 @@
+import streamlit as st
 import chromadb
 import cohere
-import streamlit as st
 import os
+#from dotenv import load_dotenv
+#load_dotenv(dotenv_path="../.env")  # Adjust path if needed
 
-# Cohere API key (hardcoded for demo; use secrets in production)
-api_key = "yGlhFfYaems7Qn25x5DYVa2eS4NiLz6Bzuh5aXyc"
-
-# Initialize clients
-cohere_client = cohere.Client(api_key)
-client = chromadb.PersistentClient()
-collection = client.get_or_create_collection(name="rag_collection_pdfs")
+#api_key = os.getenv("cohere_api_key")
+api_key ="3u0H4lmf6YYOFyMTosFyRipuj1zj6VzHr34EeB0w"
 
 def get_relevant_docs(collection, cohere_client, query, top_k=3):
-    # Embed the query
     query_emb = cohere_client.embed(texts=[query]).embeddings[0]
-    # Query ChromaDB for similar documents
     results = collection.query(
         query_embeddings=[query_emb],
         n_results=top_k
@@ -32,21 +27,31 @@ def generate_answer(cohere_client, query, docs):
     )
     return response.text.strip()
 
-# Streamlit app
-st.title("RAG Chatbot with Cohere and ChromaDB")
+def main():
+    st.title("RAG Chatbot with ChromaDB & Cohere")
+    cohere_api_key = api_key
+    cohere_client = cohere.Client(cohere_api_key)
+    client = chromadb.PersistentClient()
+    collection = client.get_or_create_collection(name="rag_collection_pdfs")
 
-query = st.text_input("Enter your question:")
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history = []
+    if "user_query" not in st.session_state:
+        st.session_state.user_query = ""
 
-if st.button("Ask"):
-    if query:
-        docs = get_relevant_docs(collection, cohere_client, query)
-        answer = generate_answer(cohere_client, query, docs)
-        
-        st.subheader("Relevant Documents:")
-        for i, doc in enumerate(docs, 1):
-            st.write(f"{i}. {doc}")
-        
-        st.subheader("Answer:")
-        st.write(answer)
-    else:
-        st.warning("Please enter a question.")
+    user_query = st.text_input("You:", value=st.session_state.user_query, key="user_query")
+    ask_clicked = st.button("Ask")
+
+    if ask_clicked and user_query:
+        docs = get_relevant_docs(collection, cohere_client, user_query)
+        answer = generate_answer(cohere_client, user_query, docs)
+        st.session_state.chat_history.append(("You", user_query))
+        st.session_state.chat_history.append(("Bot", answer))
+
+
+    st.header("Chat History")
+    for speaker, text in st.session_state.chat_history:
+        st.markdown(f"**{speaker}:** {text}")
+
+if __name__ == "__main__":
+    main()
