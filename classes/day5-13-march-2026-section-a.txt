@@ -19,6 +19,8 @@ Renewable energy
 Sl no from 61 to 67 - 412
 Indian AI models
 
+Upload your applications to huggingface spaces
+
 
 
 
