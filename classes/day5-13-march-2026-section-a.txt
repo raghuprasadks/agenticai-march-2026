@@ -1,0 +1,30 @@
+Agenda:
+1. Recap
+2. Prepare presentation for RAG chatbot - 10 slides
+Demonstrate working of RAG Chatbot
+Sl No upto 10 usn 011
+Related CSE department
+subjects,lecturers,events
+minimum 4 documents
+Sl no from 11 to 20 - 023
+Coffee growers
+Sl no from 21 to 30 - 034
+Startup India
+Sl no from 31 to 40 - 047
+Make In India
+Sl no from 41 to 50 - 066
+Natural Forming
+Sl no from 51 to 60 - 117
+Renewable energy
+Sl no from 61 to 67 - 412
+Indian AI models
+
+
+
+
+
+
+
+
+
+3. n8n workflows
