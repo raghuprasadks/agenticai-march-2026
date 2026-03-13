@@ -4,3 +4,11 @@ Save upload file to chromadb
 2. Create a search feature to
 search the content uploaded using
 upload facility
+
+Final prompt
+Create a page to upload pdf file
+required for RAG
+Save upload file to chromadb
+Create a search feature to
+search the content uploaded using
+upload facility.Use 1-chromapdf.py and 3-cohere-streamlit.py for reference.. Create new program called ragchatbot

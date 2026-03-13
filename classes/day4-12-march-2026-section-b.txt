@@ -2,7 +2,6 @@ Recap:
 1. RAG
 2. N8N
 API - Application Programming Interface
-
 Weather of a particular place
 Weather as a service
 Webservice 
