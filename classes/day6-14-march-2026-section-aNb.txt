@@ -8,14 +8,20 @@ Sign up and login
 I want to get weather information of a place. You can use cohere model along with freely available weather api. use appropriate tools
 
 https://docs.crewai.com/en/installation
-
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-
 create crewaihandson folder
 open in terminal
-
 uv init crewai-tutorial
-uv add crewai[tools]
+cd crewai-tutorial
+code .
+open terminal
+uv add crewai[ tools]
 uv add "crewai[google-genai]"
-
-
+https://aistudio.google.com/
+create api key
+create .env file
+GEMINI_API_KEY=
+copy program from git
+program/crewai/1-ema
+activate .venv virtual environment
+python 1-emai...py
