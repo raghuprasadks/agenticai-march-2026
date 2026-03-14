@@ -1,0 +1,8 @@
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+uv init crewai-tutorial
+uv add crewai[tools]
+uv add "crewai[google-genai]"
+https://serper.dev/
+
+https://youtu.be/G42J2MSKyc8?si=walo1Crg84X3IALf

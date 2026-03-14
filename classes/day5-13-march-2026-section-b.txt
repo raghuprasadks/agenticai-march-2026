@@ -1,0 +1,29 @@
+Recap:
+
+1. RAG - Custom chatbot
+Theme
+Chatbot,presentation
+
+www.kaushalya.tech
+ekaushalya
+MERN with AI
+MongoDB
+Express
+React
+Node
+Rag chatbot
+
+Front end (react,express,python-openai)
+
+Sign In
+ekaushalya.kaushalya.tech
+
+Login
+AI Mock Interview
+AI Voice interview
+
+2. N8N
+Cohere chat
+openweather map
+news 
+https://newsapi.org/
